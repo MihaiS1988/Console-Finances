@@ -2,7 +2,7 @@
 
 ## Details about the project:
 
-* No of months
+* Number of months
 * Total Sum
 * Average of changes
 * Highest and lower profit showed in numbers and months
