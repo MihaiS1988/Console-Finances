@@ -142,3 +142,22 @@ function getAverage() {
    
     return average = Math.round((sumOfChanges()/ changes.length) * 100) / 100;
    }
+
+function getHighestMonth(array) {
+
+    for (let i = 0; i < array.length; i++) {
+        for (let j = 0; j < array[i].length; j++)
+            if (array[i][1] > high_month) {
+                high_month = array[i][1];
+                high_month_name = array[i][0];
+            }
+    }
+    return high_month_name + " ($ " + high_month + ")";
+}
+
+
+document.getElementById("highest-month").innerHTML = getHighestMonth(changes);
+document.getElementById("total_months").innerHTML = getTotalMonths(finances);
+document.getElementById("lowest-month").innerHTML = getLowestMonth(changes);
+document.getElementById("average").innerHTML = getAverage();
+document.getElementById("totalSum").innerHTML = getTotalSum(finances);
