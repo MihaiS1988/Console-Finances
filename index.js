@@ -96,7 +96,8 @@ let average = 0; // Average change
 let high_month = 0; // Highest profit in a month
 let high_month_name = finances[0][0]; // The month Highest profit 
 let low_month_name = finances[0][0]; // The month Lowest profit
-    
+
+
 function getTotalSum(array) {
     for (let i = 0; i < array.length; i++) {
         
@@ -106,12 +107,15 @@ function getTotalSum(array) {
 
 }
 
+
 function getTotalMonths(array) {
     array.forEach(e => {
         totalMonths++;
     })
     return totalMonths;
 }
+
+
 
 function getChanges(array) {
        let changes = [];  
@@ -126,6 +130,20 @@ function getChanges(array) {
     return changes;
 }
 
+changes = getChanges(finances); 
+
+
+function sumOfChanges(){
+    let sum=0;
+    for(let i =0; i<changes.length; i++){
+     sum +=changes[i][1];
+    
+    }
+    return sum;
+}
+
+
+
 function getLowestMonth(array) {
 
     for (let i = 0; i < array.length; i++) {
@@ -138,10 +156,12 @@ function getLowestMonth(array) {
     return low_month_name + " ($" + low_month + ")";
 }
 
+
 function getAverage() {
    
     return average = Math.round((sumOfChanges()/ changes.length) * 100) / 100;
    }
+
 
 function getHighestMonth(array) {
 
@@ -156,8 +176,18 @@ function getHighestMonth(array) {
 }
 
 
+
 document.getElementById("highest-month").innerHTML = getHighestMonth(changes);
 document.getElementById("total_months").innerHTML = getTotalMonths(finances);
 document.getElementById("lowest-month").innerHTML = getLowestMonth(changes);
 document.getElementById("average").innerHTML = getAverage();
 document.getElementById("totalSum").innerHTML = getTotalSum(finances);
+
+
+
+console.log("Finances Breakdown")
+console.log("Total Months: " + totalMonths);
+console.log("Total sum: " + totalSum);
+console.log("Highest increase in Profits: " + high_month_name + " $" + high_month);
+console.log("Highest Decrease in Profits: " + low_month_name + " $" + low_month);
+console.log("Average: " + average);
