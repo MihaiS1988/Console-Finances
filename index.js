@@ -112,4 +112,16 @@ function getTotalMonths(array) {
     })
     return totalMonths;
 }
-    
+
+function getChanges(array) {
+       let changes = [];  
+    for (let i = 0; i < array.length - 1; i++) {
+        let month = array[i+1][0];
+        let number1 = array[i][1];
+        let number2 = array[i + 1][1];
+        let result = number2 - number1;
+        changes.push([ month ,result]);
+        
+    }
+    return changes;
+}
