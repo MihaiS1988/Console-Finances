@@ -88,6 +88,14 @@ var finances = [
     ];
 
 
+let totalMonths = 0; //Total number of months 
+let sumTotalChanges=0; //Sum of total changes 
+let low_month = 0; // Lowest profit in a month
+let totalSum = 0; // Total sum
+let average = 0; // Average change
+let high_month = 0; // Highest profit in a month
+let high_month_name = finances[0][0]; // The month Highest profit 
+let low_month_name = finances[0][0]; // The month Lowest profit
     
 
     
