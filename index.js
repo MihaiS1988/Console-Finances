@@ -106,5 +106,10 @@ function getTotalSum(array) {
 
 }
 
-
+function getTotalMonths(array) {
+    array.forEach(e => {
+        totalMonths++;
+    })
+    return totalMonths;
+}
     
