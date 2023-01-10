@@ -97,5 +97,14 @@ let high_month = 0; // Highest profit in a month
 let high_month_name = finances[0][0]; // The month Highest profit 
 let low_month_name = finances[0][0]; // The month Lowest profit
     
+function getTotalSum(array) {
+    for (let i = 0; i < array.length; i++) {
+        
+            totalSum += array[i][1];
+    }
+    return totalSum;
+
+}
+
 
     
