@@ -125,3 +125,20 @@ function getChanges(array) {
     }
     return changes;
 }
+
+function getLowestMonth(array) {
+
+    for (let i = 0; i < array.length; i++) {
+        for (let j = 0; j < array[i].length; j++)
+            if (array[i][1] < low_month) {
+                low_month = array[i][1];
+                low_month_name = array[i][0]
+            }
+    }
+    return low_month_name + " ($" + low_month + ")";
+}
+
+function getAverage() {
+   
+    return average = Math.round((sumOfChanges()/ changes.length) * 100) / 100;
+   }
