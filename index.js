@@ -85,7 +85,8 @@ var finances = [
     ['Dec-2016', 60988],
     ['Jan-2017', 138230],
     ['Feb-2017', 671099]
-    ];
+];
+
 
 
 let totalMonths = 0; //Total number of months 
@@ -98,6 +99,7 @@ let high_month_name = finances[0][0]; // The month Highest profit
 let low_month_name = finances[0][0]; // The month Lowest profit
 
 
+
 function getTotalSum(array) {
     for (let i = 0; i < array.length; i++) {
         
@@ -108,12 +110,15 @@ function getTotalSum(array) {
 }
 
 
+
 function getTotalMonths(array) {
     array.forEach(e => {
         totalMonths++;
     })
     return totalMonths;
 }
+
+
 
 
 
@@ -133,6 +138,7 @@ function getChanges(array) {
 changes = getChanges(finances); 
 
 
+
 function sumOfChanges(){
     let sum=0;
     for(let i =0; i<changes.length; i++){
@@ -141,6 +147,7 @@ function sumOfChanges(){
     }
     return sum;
 }
+
 
 
 
@@ -163,6 +170,9 @@ function getAverage() {
    }
 
 
+
+
+
 function getHighestMonth(array) {
 
     for (let i = 0; i < array.length; i++) {
@@ -177,11 +187,15 @@ function getHighestMonth(array) {
 
 
 
+
+
 document.getElementById("highest-month").innerHTML = getHighestMonth(changes);
 document.getElementById("total_months").innerHTML = getTotalMonths(finances);
 document.getElementById("lowest-month").innerHTML = getLowestMonth(changes);
 document.getElementById("average").innerHTML = getAverage();
 document.getElementById("totalSum").innerHTML = getTotalSum(finances);
+
+
 
 
 
